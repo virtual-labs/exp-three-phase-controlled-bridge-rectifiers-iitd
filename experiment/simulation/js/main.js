@@ -1794,6 +1794,7 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.btn_delete.set(591 +150, 362, 42)
       Scenes.items.btn_reset_3.set(591 +250, 362, 50)
       sliders.resetSlidersValue()
+      sliders.showAll()
 
       // let rightTicks = [
       //   Scenes.items.right_tick_1.set(656,21,19).hide(),
