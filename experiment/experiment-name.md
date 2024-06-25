@@ -1,1 +1,1 @@
-## Performance measurement and analysis of three phase AC-DC uncontrolled bridge rectifiers.
+## Performance Measurement and Analysis of three phase AC-DC Controlled Bridge Rectifier
