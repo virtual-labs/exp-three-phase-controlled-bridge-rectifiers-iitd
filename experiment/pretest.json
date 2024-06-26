@@ -3,12 +3,12 @@
   "questions": [
     {
 
-      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of 3-Phase Uncontrolled Rectifier.</center><br><br> 1. What is the function of a three-phase rectifier?",
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of 3-phase Controlled Rectifier.</center><br><br> 1. The output voltage of a 3-phase rectifier is:",
       "answers": {        
-        "a": "To convert AC voltage to DC voltage",
-        "b": "To convert DC voltage to AC voltage",
-        "c": "To increase the input AC voltage magnitude",
-        "d": "To decrease the input AC voltage magnitude"
+        "a": "DC and it is controlled by source voltage only.",
+        "b": "AC and it is controlled by source voltage only.",
+        "c": "DC and it is controlled only with firing angle.",
+        "d": "DC and it is controllable with source voltage and firing angle both."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -16,18 +16,37 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
       
     {
 
-      "question": "2. The conduction angle of each diode in 3-phase uncontrolled bridge rectifier is:",
+      "question": "2. The DC output voltage of a 3-phase bridge rectifier is:",
       "answers": {
-        "a": "60 Degrees",
-        "b": "90 Degrees",
-        "c": "120 Degrees",
-        "d": "180 Degrees"
+        "a": "3 pulse waveform.",
+        "b": "6 pulse waveform.",
+        "c": "12 pulse waveform.",
+        "d": "18 pulse waveform."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. The maximum peak-to-peak output DC voltage occurs at a firing angle of",
+      "answers": {
+        "a": "30 degrees",
+        "b": "60 degrees",
+        "c": "90 degrees",
+        "d": "120 degrees"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -38,54 +57,15 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-    
-    {
-
-      "question": "3. What is the peak –to- peak ripple in DC output voltage of a 3-phase full-bridge uncontrolled rectifier?",
-      "answers": {
-        "a": "0.866 V<sub>m,L-L</sub>",
-        "b": "0.1339 V<sub>m,L-L</sub>",
-        "c": "0.707 V<sub>m,L-L</sub>",
-        "d": "V<sub>m,L-L</sub>"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
         
     {
 
-      "question": "4. What will be the effect of using highly resistive load in place of highly inductive load?",
+      "question": "4. For what firing angle(s) the DC output voltage of a 3-phase fully-controlled bridge rectifier is negative?",
       "answers": {
-        "a": "Output DC voltage will be ripple free",
-        "b": "Output DC current will be pulsating in nature",
-        "c": "Output current will be AC in nature",
-        "d": "Output voltage will be AC in nature"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    
-    {
-      
-
-      "question": "5. Negative DC output voltage can easily be obtained by",
-      "answers": {
-        "a": "Reversing the input AC voltage ",
-        "b": "Change in the phase sequence of AC input voltage",
-        "c": "Reversing the diodes (D<sub>4</sub>, D<sub>6</sub> and D<sub>2</sub>) direction",
-        "d": "Reversing all six diodes direction"
+        "a": "Greater than (or) equal to 180 degrees",
+        "b": "Less than (or) equal to 90 degrees",
+        "c": "Greater than (or) equal to 120 degrees",
+        "d": "Greater than 90 degrees"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -94,6 +74,25 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "5. What will be the frequency of the firing pulse of any one thyristor of 3-phase controlled bridge rectifier?",
+      "answers": {
+        "a": "Six-times the supply frequency.",
+        "b": "Same as the supply frequency.",
+        "c": "Two-times the supply frequency.",
+        "d": "Three-times the supply frequency."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
