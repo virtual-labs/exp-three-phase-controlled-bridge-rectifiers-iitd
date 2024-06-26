@@ -3,12 +3,12 @@
   "questions": [
     {
 
-      "question": "Answer the questions given below (refer Fig. 2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of 3-Phase Uncontrolled Rectifier.</center><br><br> 1. What will be the average DC voltage if 200 V, line-to-line rms input AC voltage is given to a 3-phase uncontrolled full-bridge rectifier?",
-      "answers": {
-        "a": "230 V",
-        "b": "250 V",
-        "c": "270 V",
-        "d": "282 V"
+      "question": "Answer the questions given below (refer Fig. 2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of 3-phase Controlled Rectifier.</center><br><br> 1. What will be the average DC output voltage if 300 V input AC voltage (line-to-line rms) is given to a 3-phase controlled full-bridge rectifier operating with firing angle of 30 degree?",
+      "answers": {        
+        "a": "320 V",
+        "b": "350 V",
+        "c": "380 V",
+        "d": "410 V"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -16,18 +16,18 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
-
+      
     {
 
-      "question": "2. What will be the average DC current if 200 V, line-to-line rms input voltage is given to a 3-phase uncontrolled full-bridge rectifier having a load of 15 ohm, 50 mH which are in series.",
+      "question": "2. Is it possible to get zero average output voltage while applying 200 V AC input voltage. If yes, under what condition it can be obtained?",
       "answers": {
-        "a": "15.33 A",
-        "b": "16.67 A",
-        "c": "18 A",
-        "d": "18.8 A"
+        "a": "No, its not possible to get zero output voltage. ",
+        "b": "Yes, by reversing the connections of the thyristors.",
+        "c": "Yes, by operating the rectifier at a firing angle of 90 degrees.",
+        "d": "Yes, by changing the phase sequence of source voltage"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -36,37 +36,17 @@
         "d": "Explanation 2"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-
-    { 
-   
-      "question": "3. While connecting the 3-phase source to 3-phase uncontrolled bridge-rectifier the phase sequence of the supply gets changed. What will be the effect on output voltage?",
-      "answers": {
-        "a": "Output voltage will be same.",
-        "b": "Polarity of output voltage will be reversed.",
-        "c": "Output voltage will be half of the original voltage ",
-        "d": "Output voltage will be zero"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     
     {
 
-      "question": "4. What will be the peak inverse voltage of diodes of 3-phase uncontrolled full-bridge rectifier?",
+      "question": "3. What is the power factor for a three-phase controlled full bridge rectifier at a firing angle of 60 degrees?",
       "answers": {
-        
-        "a": "0.955 V<sub>DC</sub>",
-        "b": "V<sub>DC</sub>",
-        "c": "1.05 V<sub>DC</sub>",
-        "d": "0.86 V<sub>DC</sub>"
+        "a": "Zero",
+        "b": "0.477 (Leading)",
+        "c": "0.477 (Lagging) ",
+        "d": "0.955 (Leading)"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -77,15 +57,35 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
-            
+        
     {
 
-      "question": "5. What is the power factor for three-phase uncontrolled full bridge rectifier?",
+      "question": "4. What will be the effect on source current waveform, on using resistive load instead of highly inductive load.",
       "answers": {
-        "a": "0.9549",
-        "b": "0.9352",
-        "c": "0.9728",
-        "d": "0.8872"
+        "a": "No effect on waveform shape but the rms source current value will change.",
+        "b": "Source current waveform will be pulsating AC.",
+        "c": "The rms value of source current becomes zero.",
+        "d": "Source current waveform will be shifted by 90 degrees."
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+
+      "question": "5. How many thristors conduct under each mode of operation of a 3-phase controlled bridge rectifier?",
+      "answers": {
+        "a": "2-thyristors, one from upper arm (T<sub>1</sub>, T<sub>3</sub>, T<sub>5</sub>) and one from the lower arm (T<sub>2</sub>, T<sub>4</sub>, T<sub>6</sub>).",
+        "b": "3-thyristors, two from upper arm (T<sub>1</sub>, T<sub>3</sub>, T<sub>5</sub>) and one from lower arm (T<sub>2</sub>, T<sub>4</sub>, T<sub>6</sub>).",
+        "c": "3-thyristors, one from upper arm (T<sub>1</sub>, T<sub>3</sub>, T<sub>5</sub>) and two from lower arm (T<sub>2</sub>, T<sub>4</sub>, T<sub>6</sub>).",
+        "d": "sometimes 2 and sometimes 3, depending on the mode of operation."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
