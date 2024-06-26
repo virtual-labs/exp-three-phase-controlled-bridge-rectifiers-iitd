@@ -78,9 +78,219 @@ The output voltage and power delivered can be controlled by changing the firing 
   <img src="images/th7.png">
 <br><br>
 (e) α = 150&#176;
-<br>
+<br><br>
+Fig. 3. Typical waveforms with different firing angle.
 </center>
   </td>
 </tr>
 </table>
 <br>
+
+<div style="float: left; width:100%;"><br>
+Various mathematical expressions are derived below to quantify the performance of three-phase rectifier.
+<br><br>
+Average voltage appearing across load is defined by
+<br><br>
+</div>
+
+<br>
+<div style="float: left; width:50%;">
+  <img src="images/th8.png" height="80px">
+</div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(1)
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+Simplifying the above equation
+<br><br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th9.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(2)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+Average load current is given by
+</div><br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th10.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(3)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+where,
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th11.png" height="44px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(4)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+  Each thyristor conducts for 120&#176;. Hence, the average current through each thyristor can easily be obtained as
+</div><br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th12.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(5)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+On simplifying the above equation
+</div><br>
+
+<div style="float: left; width:50%;">
+  <img src="images/th13.png" height="70px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(6)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+Similarly, the RMS current through each thyristor can be given by
+<br>
+</div>
+
+
+<div style="float: left; width:50%;">
+  <img src="images/th14.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(7)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+On simplifying the above equation
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th15.png" height="70px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(8)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+The RMS source current can easily be obtained as
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th16.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(9)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+On simplifying the above equation
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th17.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(10)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+The RMS value of fundamental current is
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th18.png" height="80px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(11)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+The distortion factor (DF) in source current is given by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th14.png" height="76px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(12)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+However, the displacement factor (DPF) in source current is given by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th15.png" height="76px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(13)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+Hence the power factor is given by
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th16.png" height="76px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(14)
+
+</div>
+<br>
+
+<div style="float: left; width:100%;"><br>
+On substituting the values from eqns, (12) and (13)
+<br>
+</div>
+
+<div style="float: left; width:50%;">
+  <img src="images/th17.png" height="76px">
+      </div>
+<div style="float: right; width:50%; text-align:center;">
+    ..(15)
+
+</div>
