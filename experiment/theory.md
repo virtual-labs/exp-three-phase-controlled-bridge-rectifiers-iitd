@@ -93,7 +93,7 @@ Average voltage appearing across load is defined by
 <div style="float: left; width:50%;">
   <img src="images/th8.png" height="135px">
 </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br>
     ..(1)
 </div>
 <br>
