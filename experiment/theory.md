@@ -13,7 +13,7 @@ The principle of operation of the above circuit can easily be understood from th
 <br>
 
 <center>
-  <img src="images/th2.png" height="900px">
+  <img src="images/th2.png" height="700px">
   
 <br>Fig. 2. Typical waveforms.
 
@@ -70,20 +70,16 @@ The output voltage and power delivered can be controlled by changing the firing 
 </center> 
     </td>
   </tr>
+</table>
+<br>
 
-<tr>
-  <td>
-    
 <center>
-  <img src="images/th7.png">
+  <img src="images/th7.png" height="700px">
 <br><br>
 (e) α = 150&#176;
 <br><br>
 Fig. 3. Typical waveforms with different firing angle.
 </center>
-  </td>
-</tr>
-</table>
 <br>
 
 <div style="float: left; width:100%;"><br>
@@ -135,7 +131,7 @@ where,
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th11.png" height="44px">
+  <img src="images/th11.png" height="50px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(4)
@@ -148,7 +144,7 @@ where,
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th12.png" height="80px">
+  <img src="images/th12.png" height="90px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(5)
@@ -161,7 +157,7 @@ On simplifying the above equation
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th13.png" height="70px">
+  <img src="images/th13.png" height="85px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(6)
@@ -190,7 +186,7 @@ On simplifying the above equation
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th15.png" height="70px">
+  <img src="images/th15.png" height="75px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(8)
@@ -218,7 +214,7 @@ On simplifying the above equation
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th17.png" height="80px">
+  <img src="images/th17.png" height="85px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(10)
@@ -232,7 +228,7 @@ The RMS value of fundamental current is
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th18.png" height="80px">
+  <img src="images/th18.png" height="85px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(11)
@@ -246,7 +242,7 @@ The distortion factor (DF) in source current is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th14.png" height="76px">
+  <img src="images/th19.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(12)
@@ -260,7 +256,7 @@ However, the displacement factor (DPF) in source current is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th15.png" height="76px">
+  <img src="images/th20.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(13)
@@ -274,7 +270,7 @@ Hence the power factor is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th16.png" height="76px">
+  <img src="images/th21.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(14)
@@ -288,7 +284,7 @@ On substituting the values from eqns, (12) and (13)
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th17.png" height="76px">
+  <img src="images/th22.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(15)
