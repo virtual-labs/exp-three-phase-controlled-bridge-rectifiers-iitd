@@ -93,7 +93,7 @@ Average voltage appearing across load is defined by
 <div style="float: left; width:50%;">
   <img src="images/th8.png" height="135px">
 </div>
-<div style="float: right; width:50%; text-align:center;"><br>
+<div style="float: right; width:50%; text-align:center;"><br><br>
     ..(1)
 </div>
 <br>
@@ -146,7 +146,7 @@ where,
 <div style="float: left; width:50%;">
   <img src="images/th12.png" height="90px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br><br>
     ..(5)
 
 </div>
@@ -174,7 +174,7 @@ Similarly, the RMS current through each thyristor can be given by
 <div style="float: left; width:50%;">
   <img src="images/th14.png" height="105px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br><br>
     ..(7)
 
 </div>
@@ -188,7 +188,7 @@ On simplifying the above equation
 <div style="float: left; width:50%;">
   <img src="images/th15.png" height="75px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br>
     ..(8)
 
 </div>
@@ -202,7 +202,7 @@ The RMS source current can easily be obtained as
 <div style="float: left; width:50%;">
   <img src="images/th16.png" height="105px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br><br>
     ..(9)
 
 </div>
@@ -216,7 +216,7 @@ On simplifying the above equation
 <div style="float: left; width:50%;">
   <img src="images/th17.png" height="85px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br>
     ..(10)
 
 </div>
@@ -230,7 +230,7 @@ The RMS value of fundamental current is
 <div style="float: left; width:50%;">
   <img src="images/th18.png" height="85px">
       </div>
-<div style="float: right; width:50%; text-align:center;">
+<div style="float: right; width:50%; text-align:center;"><br>
     ..(11)
 
 </div>
@@ -256,7 +256,7 @@ However, the displacement factor (DPF) in source current is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th20.png" height="76px">
+  <img src="images/th20.png" height="36px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(13)
@@ -270,7 +270,7 @@ Hence the power factor is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th21.png" height="76px">
+  <img src="images/th21.png" height="36px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(14)
