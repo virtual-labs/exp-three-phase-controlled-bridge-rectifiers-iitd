@@ -3,7 +3,7 @@
 The circuit configuration of 3-phase controlled bridge rectifier is given in Fig. 1.
 
 <center>
-  <img src="images/th1.png" height="350px">
+  <img src="images/th1.png" height="300px">
   
 Fig. 1. Circuit configuration of 3-phase controlled bridge rectifier.
 
