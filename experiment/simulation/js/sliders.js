@@ -2,6 +2,9 @@ const sliders = {
     slider_V_value: 0,
     v: document.querySelector(".v .value-box input"),
     v_knob: document.querySelector(".slider-V-arrow"),
+    slider_D_value: Number(document.querySelector(".slider_D").value),
+    d: document.querySelector(".d .slider_D"),
+
     sliderV(afterClickCallback=null){
         let sliderArrow = document.querySelector(".slider-V-arrow")
         let sliderValueInput = document.querySelector(".v .value-box input")
@@ -80,10 +83,82 @@ const sliders = {
                 afterClickCallback()
         }
     },
+    sliderD(){
+        let slider_D = document.querySelector(".slider_D")
+        let sliderImg = document.querySelector(".slider-D-arrow")
+        let sliderValueInput = document.querySelector(".d .value-box input")
+        let val = 0
+        let defaultLeftPx = -172.5
+        
+        // slider function  
+        function slide(e){
+            e = e instanceof Event
+            if(e){
+                sliderValueInput.value = slider_D.value 
+            }
+            else{
+                slider_D.value = sliderValueInput.value
+            }
+            val = ((slider_D.value * 95) / 83) - 0
+            sliderImg.style.left = `${defaultLeftPx + val}px`
+
+            // ! update the text accroding to value
+            if(Scenes.currentStep == 10 || Scenes.currentStep == 11){
+                let betaTempText = Scenes.items.tempTitle41
+                let first = 183.6
+                let second = 194.1
+                let load_1 = 100
+                let betaDeg = (values.R == load_1 ? first : second)
+                if(slider_D.value <= 30){
+                    betaDeg = 180
+                }
+                betaTempText.setContent(betaDeg)
+            }
+            // ! update slider details according to wave form
+            if(Scenes.currentStep == 4){
+                if(slider_D.value==30){
+                    sliderImg.style.left = "114px"
+                }
+                if(slider_D.value==90){
+                    sliderImg.style.left = "185.44px"
+                }
+                if(slider_D.value==150){
+                    sliderImg.style.left = "258px"
+                }
+            }
+        }
+    
+        const slideInput = ()=>{
+            let val = sliderValueInput.value
+            if(val > 150){
+                val = 150
+            }
+            sliderValueInput.value = val
+            slide(false)
+        }
+    
+        slider_D.oninput = slide
+        sliderValueInput.onkeyup = slideInput
+        sliderValueInput.addEventListener("focusout",()=>{
+            if(sliderValueInput.value < 0 || sliderValueInput.value.length == 0){
+                sliderValueInput.value = 0
+            }
+            slide(false)
+        })
+    },
     init(){
         this.sliderV()
+        this.sliderD()
     },
     resetSlidersValue(){
+        document.querySelector(".slider-D-arrow").style.left = "-172.5px"
+        sliders.d.min = "0"
+        sliders.d.max = "150"
+        sliders.d.step = "1"
+        sliders.d.value = 1 
+        document.querySelector(".d .value-box input").value = sliders.d.value
+        document.querySelector(".d .value-box input").readOnly = false
+
         document.querySelector(".slider-V-arrow").style.transform=`rotate(${0}deg)`
         document.querySelector(".v .value-box input").value = 0
     },

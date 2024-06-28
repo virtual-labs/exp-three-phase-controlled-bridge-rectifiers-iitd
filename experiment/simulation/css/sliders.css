@@ -104,50 +104,51 @@
 /* slider d */
 .slider .slider_D{
     transform: rotate(0deg);
-    left: 244px;
-    top: 159.8px;
-    width: 171.5px;
+    left: 39px;
+    top: 179.8px;
+    width: 188.5px;
     background-color: transparent;
 }
 
 .slider .d .value-box{
+    border-radius: 4px;
     font-weight: 100;
-    width: 22px;
-    padding: 0;
+    width: 33px;
+    padding: 0px 3px;
     position: absolute;
-    left: 423px;
-    top: 124px;
+    left: 253px;
+    top: 154px;
     z-index: 500;
 }
 .slider .d .value-box input{
     padding: 0 1px 3px 1px;
     background: transparent;
-    font-size: 11px;
+    font-size: 14px;
     border: none;
     outline: none;
-    width: 22px;
+    width: 32px;
     font-weight: bold;
 }
 .slider .d .slider-D-body{
     position: absolute;
-    left: 243px;
-    top: 104.5px;
-    height: 86px;
+    left: 42px;
+    top: 145.5px;
+    height: 72px;
 }
 
 .slider .d .slider-D-helper{
-    height: 66px;
-    width: 160px;
-    left: 251px;
-    top: 92.8px;
+    height: 72px;
+    width: 249px;
+    left: 41px;
+    top: 142.8px;
     position: absolute;
 }
 
 .slider .d .slider-D-arrow{
     position: absolute;
-    left: 96px;
-    top: 100px;
-    width: 170px;
+    left: -172.5px;
+    top: 151px;
+    height: 79px;
 }
 
 .slider .slider-D-body.back{
@@ -157,10 +158,10 @@
     z-index: 30;
 }
 .slider .slider-D-arrow{
-    z-index: 15;
+    z-index: 20;
 }
 .slider .slider-D-body.bottom{
-    z-index: 40;
+    z-index: 15;
 }
 
 
@@ -176,17 +177,25 @@
     /* width: 35px; */
     position: absolute;
     z-index: 200;
-    top: 48.5px;
+    top: 46.5px;
     left: 126.8px;
     width: 61px;
     transition: 0.3s;
 }
 .slider .v .value-box{
+    padding: 2px 5px;
+    background: green;
+    color: white;
     position: relative;
-    left: 296px;
-    top: -21px;
+    left: 204px;
+    top: -18px;
     z-index: 200;
-    border: none!important;
+    /* border: none !important; */
+    border-radius: 5px;
+}
+.slider .v .value-box input{
+    color: white;
+    background: green;
 }
 .slider-box{
     position: absolute;

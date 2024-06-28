@@ -3,7 +3,7 @@ def html(name):
     return '''
      <img
         class="main-window-imgs"
-        src="./src/images/EE13/{0}"
+        src="./src/images/EE16/{0}"
     />
     '''.format(name)
 
@@ -16,7 +16,7 @@ def dom(name):
     return f'{name1} : new Dom("{name1}"),\n'
 
 
-sneha_folder_path = "E:\\office project\\vlabs-EE\\EE13\\src\\images\\EE13\\"
+sneha_folder_path = "E:\\office project\\vlabs-EE\\EE16\\src\\images\\EE16\\"
 
 # utkarsh_folder_path = "S:\\Users\\Utkarsh\\Documents\\Office Main\\All Projects Repo\\vlabs-EE\\EE4\\src\\images\\exp4\\part2\\"
 

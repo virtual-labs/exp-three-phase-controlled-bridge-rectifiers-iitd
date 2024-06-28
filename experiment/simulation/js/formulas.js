@@ -6,24 +6,25 @@ const Formulas = {
     },
 
     part_3 : {
+
+
         vm(values){
             let ans = Math.sqrt(2) * values.vIn  
             return Number(ans).toFixed(4)
         },
         v0(values){
-            let ans = 0.955 * this.vm(values)
+            let ans = ((3 * this.vm(values)) / pie) * Math.cos(values.D)
             return Number(ans).toFixed(4)
         },
         i0(values){
-            console.log(values,values.R,values.L);
             let ans = this.v0(values) / values.R
             return Number(ans).toFixed(4)
         },
-        iD_avg(values){
+        iT_avg(values){
             let ans = this.i0(values) / 3
             return Number(ans).toFixed(4)
         },
-        iD_rms(values){
+        iT_rms(values){
             let ans = this.i0(values) / Math.sqrt(3)
             return Number(ans).toFixed(4)
         },
@@ -36,7 +37,7 @@ const Formulas = {
             return Number(ans).toFixed(4)
         },
         pf(values){
-            let ans =  0.9549
+            let ans =  (3 / pie) * Math.cos(values.D)
             return Number(ans).toFixed(4)
         },
 

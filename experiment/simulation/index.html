@@ -102,7 +102,7 @@
             <!-- transparent layer for question -->
             <div class="transparent-box"></div>
             <section class="anime-header">
-              <p style="text-transform: uppercase;position: relative;left: -255px; font-size:23px">3-Phase Uncontrolled rectifier </p>
+              <p style="text-transform: uppercase;position: relative;left: -255px; font-size:23px">3-Phase Controlled rectifier </p>
               
               <div class="btn-popup-box">
                 <p class="btn-popup">Procedure</p>
@@ -669,12 +669,13 @@
                   <tr>
                     <th>S.No.</th>
                     <th>V<sub>s</sub>(V)</th>
+                    <th>α<sup>o</sup></th>
                     <th>V<sub>0</sub>(V)</th>
                     <th>I<sub>0</sub>(A)</th>
                     <th>I<sub>in_rms</sub>(A)</th>
                     <th>I<sub>in_1</sub>(A)</th>
-                    <th>I<sub>D_avg</sub>(A)</th>
-                    <th>I<sub>D_rms</sub>(A)</th>
+                    <th>I<sub>T_avg</sub>(A)</th>
+                    <th>I<sub>T_rms</sub>(A)</th>
                     <th>PF</th>
                   </tr>
                 </thead>
@@ -682,6 +683,7 @@
                   <tr>
                     <td>1</td>
                     <td></td>
+                    <td>0</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -694,6 +696,7 @@
                   <tr>
                     <td>2</td>
                     <td></td>
+                    <td>150</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -712,9 +715,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>4</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -734,6 +739,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>6</td>
@@ -745,9 +751,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>7</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -1007,6 +1015,19 @@
                       <span>V</span>
                     </div>
                   </div>    
+                  <div class="d slider-box">
+                    <input type="range" class="slider_D range-slider" step="1" min="0" max="180" value="1" onchange="">
+                    <!-- <img src="./src/images/sliders/slider_D_blank.png" class="slider-D-arrow">
+                    <img src="./src/images/sliders/slider_D_body.png" alt="" class="slider-D-body"> -->
+                    <img src="./src/images/sliders/new_slider_tip.png" class="slider-D-arrow">
+                    <!-- <img class="slider-D-body back" src="./src/images/sliders/new_slider_bcg.png" > -->
+                    <img class="slider-D-body bottom" src="./src/images/sliders/new_slider_bcg_bottom.png" >
+                    <img src="./src/images/sliders/new_slider_bcg_helper.png" class="slider-D-helper">
+                    <div class="value-box">
+                      <!-- <span>0</span> -->
+                      <input onchange="" type="text" value="1" min="1" max="180" >
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- </div> -->
@@ -1183,130 +1204,370 @@
     />
     <!-- ! Procedure formula Nomenclature images end -->
 
-    <!--! EE13 images added -->
+    <!--! EE16 images added -->
     
-    <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_check.png"
-/>
+          <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_delete.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_delete.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_priciple_of_operation.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_next_mode.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_proceed.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_record.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_record.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_reset.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_reset.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_reset_3.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_reset_2.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_restart_operation.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_restart_waveform.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/option_1_tab_1.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t1.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/option_1_tab_2.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t2.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/option_1_tab_3.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t3.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/option_1_tab_4.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t4.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/option_1_tab_5.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t5.png"
+      />
 
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/part_1_components.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_turn_on_t6.png"
+      />
 
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/part_2_components.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_verify.png"
+      />
 
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/part_3_circuit.png"
-/>
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/btn_waveforms.png"
+      />
 
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/part_3_option_1_alpha_vs.png"
-/>
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/dotted_big_box.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/part_3_option_1_load_1.png"
-/>
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/dotted_small_box.png"
+      />
 
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/part_3_option_1_load_2.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/big_helper.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs"
-    src="./src/images/EE13/helper_1.png"
-/>
- <img
-    class="main-window-imgs btn-img"
-    src="./src/images/EE13/btn_proceed.png"
-/>
-<!-- ! EE13 images end here -->
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/load_1.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/load_2.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_0.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_1.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_2.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_3.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_4.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/page_5.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_components.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_components_connected.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text_1.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text_2.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text_3.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text_4.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_1_text_5.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_2_circuit.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_2_graph_full_left.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_2_graph_full_right.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_0_deg.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_1.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_120_deg.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_150_deg.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_2.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_3.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_30_deg.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_4.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_5.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_60_deg.png"
+      />
+
+      <img
+          class="main-window-imgs pointer"
+          src="./src/images/EE16/tab_90_deg.png"
+      />
+
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/text_performance_characteristic.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/big_helper.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/helper_1.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/tab_alpha.png"
+      />
+      <img
+          class="main-window-imgs"
+          src="./src/images/EE16/part_3_circuit.png"
+      />
+
+      <!--! for left side graph -->
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/helper.png"
+      />
+
+      <!-- * for graph blinking -->
+       
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_big_box.png"
+      />
+      
+      <!-- * for left side graph blinking -->
+       
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/dotted_small_box.png"
+      />
+      
+      <!-- * other images  -->
+      <img
+      class="main-window-imgs"
+      src="./src/images/EE16/circuit_upper_layer.png"
+      />
+<!-- ! EE16 images end here -->
 
 
               <!-- * Videos -->

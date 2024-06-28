@@ -271,6 +271,7 @@ const setIsProcessRunning = (value) => {
   isRunning = value;
   if(value){
     Dom.hideAll()
+    window.speechSynthesis.cancel()
   }
 };
 
@@ -356,8 +357,11 @@ function setCC(text = null, speed = 25) {
       // }
     }
   });
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let utterance = null
+  if (!isMute){
+    utterance = textToSpeach(text);
+  } 
+  return utterance;
 }
    
 
@@ -909,36 +913,98 @@ formulas_universal : new Dom("formulas_universal"),
 // EE2 images added
 btn_reset_connections: new Dom(".btn-connections"),
 
-    //! EE13 images added 
-     
-    btn_check : new Dom("btn_check"),
-    btn_delete : new Dom("btn_delete"),
-    btn_next_mode : new Dom("btn_next_mode"),
-    btn_record : new Dom("btn_record"),
-    btn_reset : new Dom("btn_reset"),
-    btn_reset_3 : new Dom("btn_reset_3"),
-    btn_restart_operation : new Dom("btn_restart_operation"),
-    option_1_tab_1 : new Dom("option_1_tab_1"),
-    option_1_tab_2 : new Dom("option_1_tab_2"),
-    option_1_tab_3 : new Dom("option_1_tab_3"),
-    option_1_tab_4 : new Dom("option_1_tab_4"),
-    option_1_tab_5 : new Dom("option_1_tab_5"),
-    part_1_components : new Dom("part_1_components"),
-    part_2_components : new Dom("part_2_components"),
-    part_3_circuit : new Dom("part_3_circuit"),
-    part_3_option_1_alpha_vs : new Dom("part_3_option_1_alpha_vs"),
-    part_3_option_1_load_1 : new Dom("part_3_option_1_load_1"),
-    part_3_option_1_load_2 : new Dom("part_3_option_1_load_2"),
-    big_helper : new Dom("big_helper"),
-    helper_1 : new Dom("helper_1"),
-    helper_2 : new Dom("helper_2"),
-    helper_3 : new Dom("helper_3"),
-    helper_4 : new Dom("helper_4"),
-    helper_5 : new Dom("helper_5"),
-    helper_6 : new Dom("helper_6"),
-    btn_proceed : new Dom("btn_proceed"),
+    //! EE16 images added 
+          
+      btn_delete : new Dom("btn_delete"),
+      btn_priciple_of_operation : new Dom("btn_priciple_of_operation"),
+      btn_proceed : new Dom("btn_proceed"),
+      btn_record : new Dom("btn_record"),
+      btn_reset : new Dom("btn_reset"),
+      btn_reset_2 : new Dom("btn_reset_2"),
+      btn_restart_waveform : new Dom("btn_restart_waveform"),
+      btn_turn_on_t1 : new Dom("btn_turn_on_t1"),
+      btn_turn_on_t2 : new Dom("btn_turn_on_t2"),
+      btn_turn_on_t3 : new Dom("btn_turn_on_t3"),
+      btn_turn_on_t4 : new Dom("btn_turn_on_t4"),
+      btn_turn_on_t5 : new Dom("btn_turn_on_t5"),
+      btn_turn_on_t6 : new Dom("btn_turn_on_t6"),
+      btn_verify : new Dom("btn_verify"),
+      btn_waveforms : new Dom("btn_waveforms"),
+      dotted_big_box : new Dom("dotted_big_box"),
+      dotted_small_box : new Dom("dotted_small_box"),
+      load_1 : new Dom("load_1"),
+      load_2 : new Dom("load_2"),
+      page_0 : new Dom("page_0"),
+      page_1 : new Dom("page_1"),
+      page_2 : new Dom("page_2"),
+      page_3 : new Dom("page_3"),
+      page_4 : new Dom("page_4"),
+      page_5 : new Dom("page_5"),
+      part_1_components : new Dom("part_1_components"),
+      part_1_components_connected : new Dom("part_1_components_connected"),
+      part_1_text : new Dom("part_1_text"),
+      part_1_text_1 : new Dom("part_1_text_1"),
+      part_1_text_2 : new Dom("part_1_text_2"),
+      part_1_text_3 : new Dom("part_1_text_3"),
+      part_1_text_4 : new Dom("part_1_text_4"),
+      part_1_text_5 : new Dom("part_1_text_5"),
+      part_2_circuit : new Dom("part_2_circuit"),
+      part_2_graph_full_left : new Dom("part_2_graph_full_left"),
+      part_2_graph_full_right : new Dom("part_2_graph_full_right"),
+      tab_0_deg : new Dom("tab_0_deg"),
+      tab_1 : new Dom("tab_1"),
+      tab_120_deg : new Dom("tab_120_deg"),
+      tab_150_deg : new Dom("tab_150_deg"),
+      tab_2 : new Dom("tab_2"),
+      tab_3 : new Dom("tab_3"),
+      tab_30_deg : new Dom("tab_30_deg"),
+      tab_4 : new Dom("tab_4"),
+      tab_5 : new Dom("tab_5"),
+      tab_60_deg : new Dom("tab_60_deg"),
+      tab_90_deg : new Dom("tab_90_deg"),
+      text_performance_characteristic : new Dom("text_performance_characteristic"),
+      big_helper : new Dom("big_helper"),
+      helper_1  : new Dom("helper_1"),
+      helper_2  : new Dom("helper_2"),
+      helper_3  : new Dom("helper_3"),
+      helper_4  : new Dom("helper_4"),
+      helper_5  : new Dom("helper_5"),
+      helper_6  : new Dom("helper_6"),
+      tab_alpha : new Dom("tab_alpha"),
+      part_3_circuit : new Dom("part_3_circuit"),
 
-//!  EE13 images end here
+      //* for left side graph
+      
+      small_helper_1 : new Dom("small_helper_1"),
+      small_helper_2 : new Dom("small_helper_2"),
+      small_helper_3 : new Dom("small_helper_3"),
+      small_helper_4 : new Dom("small_helper_4"),
+      small_helper_5 : new Dom("small_helper_5"),
+      small_helper_6 : new Dom("small_helper_6"),
+      
+      //* for front side graph
+      
+      dotted_big_box_1 : new Dom("dotted_big_box_1"),
+      dotted_big_box_2 : new Dom("dotted_big_box_2"),
+      dotted_big_box_3 : new Dom("dotted_big_box_3"),
+      dotted_big_box_4 : new Dom("dotted_big_box_4"),
+      dotted_big_box_5 : new Dom("dotted_big_box_5"),
+      dotted_big_box_6 : new Dom("dotted_big_box_6"),
+      
+      //* for left side graph
+      
+      dotted_small_box_1 : new Dom("dotted_small_box_1"),
+      dotted_small_box_2 : new Dom("dotted_small_box_2"),
+      dotted_small_box_3 : new Dom("dotted_small_box_3"),
+      dotted_small_box_4 : new Dom("dotted_small_box_4"),
+      dotted_small_box_5 : new Dom("dotted_small_box_5"),
+      dotted_small_box_6 : new Dom("dotted_small_box_6"),
+      
+      //other images
+      circuit_upper_layer : new Dom("circuit_upper_layer"),
+
+
+      //!  EE16 images end here
 
 
 concept_development: new Dom(".concept_development"), 
@@ -1034,6 +1100,8 @@ concept_development: new Dom(".concept_development"),
   },
   currentStep: 0,
   subCurrentStep: 0,
+  // ! for handeling current load selection in EE16
+  currentLoad: 0,
   resetSubStep() {
     this.subCurrentStep = 0;
   },
@@ -1045,10 +1113,16 @@ concept_development: new Dom(".concept_development"),
     Scenes.items.stepDescription.setContent(description);
     Scenes.items.stepHeading.show("flex").push();
   },
+  hideStepHeading(){
+    document.querySelector(".step-heading").style.visibility = "hidden"
+  },
   // for typing hello text
   intru: null,
   intruVoice: null,
   optionsDone:[0,0,0,0],
+  // ! for handeling current load selection in EE16
+  operationAndWaveformDone: 0,
+  
   steps: [
     (intro = () => {
       // remove all dom element for back and setProcessRunning
@@ -1182,8 +1256,8 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.btn_transparent.set().hide()
       Scenes.items.slider_box.hide()
 
-      setCC("A three phase uncontrolled diode rectifier is shown here. It has six diodes which are connected to form a bridge rectifier.")
-      setCC("AC input voltage is adjusted through a three phase autotransformer. Load is R-L type.")
+      setCC("A three phase fully-controlled rectifier is shown here. It has six thyristors  which are connected to form a bridge rectifier.")
+      setCC("Connect various components properly to form a 3-phase controlled rectifier.")
 
 
       let vertexBox = new Dom(".vertex-box")
@@ -1191,10 +1265,34 @@ concept_development: new Dom(".concept_development"),
 
       //! Required positions
       Scenes.items.part_1_components.set(4, 3, 410, 923)
-      Scenes.items.btn_reset.set(820, -36, 42).zIndex(1)
-      Scenes.items.btn_check.set(820, 10, 42).zIndex(1)
+      Scenes.items.btn_verify.set(740, -36, 49).zIndex(1)
+      Scenes.items.btn_reset.set(740+120, -36, 52).zIndex(1)
+      let blinkText = Scenes.items.part_1_text.set(197,4,100)
+      anime({
+        targets: blinkText.item,
+        loop: true,
+        duration: 1000,
+        scale: [1, 1.1],   
+        direction: "alternate",   
+        easing: "easeInOutQuad"
+      })
 
-  
+      let st = {
+        backgroundColor: "#c00000",
+          fontSize: "1.2rem",
+          padding: "2px",
+          textShadow: "1px 2px #c00000"
+      }
+
+      // Scenes.items.tempTitle10.setContent("Connect the components to form a 3-phase uncontrolled bridge rectifier").set(94, 6, 57, 357).styles(st)
+
+      anime({
+        targets: Scenes.items.tempTitle10.item,
+        scale: [1, 1.1],
+        easing: "linear",
+        loop: true,
+      })
+      
       // connected vertex src and dest
       let allConnectedVertexSrcDest = {}
 
@@ -1204,20 +1302,20 @@ concept_development: new Dom(".concept_development"),
 
           Dom.setBlinkArrowRed(-1)
 
-          setCC("Connections are correct. Proceed for experimentation")
+          setCC("Connections are  appropriate. Proceed further and start experiment")
 
           // * destroy all the connection
-             
+          
           
           //to go to next step 
-          setCC("Click 'Next' to go to next step");
+          // setCC("Click 'Next' to go to next step");
           Dom.setBlinkArrow(true, 790, 544).play();
           setIsProcessRunning(false);
           
 
         }
         else{
-          setCC("Incorrect connections, try again")
+          setCC("Incorrect connections, press Reset and try again")
         }
       }
 
@@ -1227,7 +1325,7 @@ concept_development: new Dom(".concept_development"),
       // ! JSPLumb cable 
       function cable(){
         
-        Scenes.items.btn_check.item.onclick = checkCableConnection
+        Scenes.items.btn_verify.item.onclick = checkCableConnection
         // ! connections array contains connected idxs
         // ! initializing the checkgraph for connections
         let matricesForCheckGraph = []
@@ -1345,7 +1443,7 @@ concept_development: new Dom(".concept_development"),
             // ! show blink when all vertex are connected
             // todo change size 4 to 13
             if(connections.length == minimumConnectionsLength){
-              Dom.setBlinkArrowRed(true,783, 15, 30,30,180).play()
+              Dom.setBlinkArrowRed(true,778, 15, 30,30,90).play()
 
               // Dom.setBlinkArrowRed(true,805,10,30,null,90).play()
             }
@@ -1628,8 +1726,6 @@ concept_development: new Dom(".concept_development"),
 
       return true
     }),
-
-    //! Operations and waveforms
     (step2 = function () {
       setIsProcessRunning(true);
 
@@ -1637,7 +1733,6 @@ concept_development: new Dom(".concept_development"),
         "",
         ""
       )
-
       // * Destroy all connections
       Scenes.items.btn_reset.item.click()
         getAll(".jtk-endpoint").forEach(ele=>{
@@ -1650,121 +1745,519 @@ concept_development: new Dom(".concept_development"),
 
       //! Required Items
 
-      Scenes.items.part_2_components.set(0, -63, 453, 934)
-      Scenes.items.btn_proceed.set(55, 342 ,67).zIndex(1)
-      Dom.setBlinkArrowRed(true,179, 312,30,30,-90).play()
-      setCC("Proceed further to understand the  principle of operation by observing various current waveforms")
+      let items = Scenes.items
 
+      items.part_1_components_connected.set(-2, 70, 207)
+      items.part_1_text_1.set(570, -40 -20   ,    77+8)
+      items.part_1_text_2.set(570, -45+80 +15-20, 77+8)
+      items.part_1_text_3.set(570, -45+160+25-20, 91+8)
+      items.part_1_text_4.set(570, -45+245+35-20, 91+8)
+      items.part_1_text_5.set(570, -45+330+45-20, 91+8)
 
-
-      setCC("For better understanding, the waveforms are drawn for 60 degrees time duration. Here Diodes  D5 and D6 are conducting.")
-      setCC("In the next 60 degrees time duration diode D5 turns off while diode D1 starts conducting.")
-
-      //! onclick for proceed btn
-      let btn_proceed = Scenes.items.btn_proceed
-      btn_proceed.item.onclick = ()=>{
-        Scenes.items.btn_proceed.hide()
-        Scenes.items.btn_next_mode.set(55, 358 ,40).zIndex(1)
-        Dom.setBlinkArrowRed(true,121, 321,30,30,-90).play()
-
-
-        Scenes.items.big_helper.set(748, -34, 397, 170)
-        Scenes.items.helper_1.set(314, 13, 103, 59).opacity(0.85)
-        Scenes.items.helper_2.set(410, 13, 103, 59).opacity(0.85)
-        Scenes.items.helper_3.set(500, 13, 103, 59).opacity(0.85).hide()
-        Scenes.items.helper_4.set(314, 195, 103, 59).opacity(0.85)
-        Scenes.items.helper_5.set(410, 195, 103, 59).opacity(0.85).hide()
-        Scenes.items.helper_6.set(496, 195, 103, 59).opacity(0.85)
-
+      
+      let helpers = [
+        items.helper_1.set(568, -62, 83, 376).zIndex(1),
+        items.helper_2.set(568, 29, 83, 376).zIndex(1),
+        items.helper_3.set(568, 119, 88, 381).zIndex(1),
+        items.helper_4.set(568, 214, 88, 381).zIndex(1),
+        items.helper_5.set(568, 308, 91, 381).zIndex(1),
+      ]
+      //! working
+      function shiftRight(target){
+        anime({
+          targets: target.item,
+          translateX: 440,
+          easing: "linear",
+          duration: 2000,
+        })
       }
       
-       //! onclick for reset button
-       let btn_reset = Scenes.items.btn_restart_operation
-        btn_reset.item.onclick = function(){
-          sliders.resetSlidersValue()
-          Scenes.steps[3]()
-        }
-        
-      //! functionality
+      let texts = [
+        "The bridge circuit consists of six-thyristors  which are arranged to form a bridge circuit.",
+        "No two thyristors from same arm will conduct simultaneously. In case two Thyristors from the same arm conducts then it provides freewheeling action to the load.",
+        "At any given time instant two thyristors will conduct one from top arm and one from bottom arm.",
+        "Each thyristor conducts for 120 degrees duration and after every 60 degrees firing pulses are given to incoming thyristor.",
+        "Simultaneous conduction of two thyristors of same arm will provide freewheeling of load current."
+      ]
 
       let idx = 0
-      function play(){
+      shiftRight(helpers[idx])
+      setCC(texts[idx]).onend = ()=>{
+        idx ++
+        shiftRight(helpers[idx])
+        setCC(texts[idx]).onend = () =>{
+          idx++
+          shiftRight(helpers[idx])
+          setCC(texts[idx]).onend = ()=>{
+            idx++
+            shiftRight(helpers[idx])
+            setCC(texts[idx]).onend = ()=>{
+              idx++
+              shiftRight(helpers[idx])
+              setCC(texts[idx]).onend = ()=>{
+                //* After complete
+                Dom.setBlinkArrow(true, 790, 408).play()
+                setCC("Click 'Next' to go to next step")
+                setIsProcessRunning(false)
 
-        function shiftRight(){
-          let left = [780, 813, 846, 880, 913]
-          let width = [135, 103, 68, 34, 0]
-          anime({
-            targets: Scenes.items.big_helper.item,
-            left: left[idx],
-            width: width[idx],
-            easing: "linear",
-            duration: 800,
-          })
+              }
+            }
+          }
         }
-        switch(idx){
-          case 0: {
-            setCC("Here, the  diodes D6  and D1 start conducting.")
-            Scenes.items.helper_3.show()
-            Scenes.items.helper_1.hide()
-            Scenes.items.helper_5.hide()
-            shiftRight()
-          }
-          break
-          case 1: {
-            setCC("Here, the  diodes D1  and D2 start conducting.")
-            Scenes.items.helper_5.show()
-            Scenes.items.helper_1.hide()
-            Scenes.items.helper_6.hide()
-            shiftRight()
-          }
-          break
-          case 2: {
-            setCC("Here, the  diodes D2  and D3 start conducting.")
-            Scenes.items.helper_1.show()
-            Scenes.items.helper_2.hide()
-            Scenes.items.helper_6.hide()
-            shiftRight()
-          }
-          break
-          case 3: {
-            setCC("Here, the  diodes D3  and D4 start conducting.")
-            Scenes.items.helper_6.show()
-            Scenes.items.helper_2.hide()
-            Scenes.items.helper_4.hide()
-            shiftRight()
-          }
-          break
-          case 4: {
-            setCC("Here, the  diodes D4  and D5 start conducting.")
-            Scenes.items.helper_2.show()
-            Scenes.items.helper_3.hide()
-            Scenes.items.helper_4.hide()
-            shiftRight()
-          }
-          break
-          
-        }
-        console.log(idx)
-        if(idx == 4){
-          Dom.setBlinkArrowRed(-1)
-          setCC("For better understanding of principle of operation, here all current waveforms are shown for one input ac cycle.")
-          Scenes.items.btn_restart_operation.set(55, 358 ,40).zIndex(1)
-          // after complete
-          Dom.setBlinkArrow(true, 790, 408).play()
-          setCC("Click 'Next' to go to next step")
-          setIsProcessRunning(false)
-        }
-        idx++;
       }
-      let btn = Scenes.items.btn_next_mode
-      btn.item.onclick = play
-
 
       return true
     }),
 
-   //! part 3 Perform analysis
+    //! Operations and waveforms
     (step3 = function () {
+      setIsProcessRunning(true);
+
+      Scenes.setStepHeading(
+        "",
+        ""
+      )
+
+      //to hide slider
+      sliders.hideAll()
+      Scenes.items.btn_next.show();
+
+      let btns = [
+        Scenes.items.btn_priciple_of_operation.set(266, 55, 109),
+        Scenes.items.btn_waveforms.set(256, 208, 136),
+      ]
+
+      console.log(Scenes.operationAndWaveformDone)
+      if(Scenes.operationAndWaveformDone == 1){
+        Dom.setBlinkArrowRed(true,229, 265,30,30,180).play()
+      }else{
+        Dom.setBlinkArrowRed(true,229, 95,30,30,180).play()
+      }
+      setCC("Start the operation and observe the Principle of operation")
+
+      Scenes.items.btn_priciple_of_operation.item.onclick = ()=>{
+        Scenes.operationAndWaveformDone = 1;
+        Scenes.optionsDone[0] = 1;
+        partOne()
+      }
+
+      Scenes.items.btn_waveforms.item.onclick = ()=>{
+        Scenes.operationAndWaveformDone = 2;
+        Scenes.optionsDone[1] = 1;
+        partTwo()
+      }
+
+      function partOne(){ 
+
+        btns.forEach((ele)=>{
+          ele.hide()
+        })
+          //! Required Items
+
+          let items = Scenes.items
+
+          Scenes.items.part_2_circuit.set(-2, -63, 317).zIndex(5)
+          items.part_2_graph_full_left.set(14, 186, 225)
+          items.part_2_graph_full_right.set(634, -76, 492)
+
+
+          // let part_2_graph_helper_white = Scenes.items.tempTitle11.set(688,-39,431,248).styles({
+            // backgroundColor: "white",
+          // }).zIndex(4)
+
+          Scenes.items.btn_proceed.set(316, 342, 67).zIndex(1)
+          Scenes.items.btn_restart_waveform.set(316, 342, 67).zIndex(1).hide()
+          Dom.setBlinkArrowRed(true,448, 310,30,30,-90).play()
+
+
+          setCC("At any given point of time two thyristors will be conducting one from top and second from bottom leg. Each thyristor  conducts for 120 degrees time duration.")
+          setCC("After every 60 degrees one thyristor will turn off while other thyristor will turn on.")
+          setCC("Proceed further to understand the  principle of operation by observing various current waveforms.")
+
+
+          function blink(target){
+            anime({
+              targets: target.item,
+              scale: [1,1.1],
+              easing: "easeInOutQuad",
+              loop: true,
+            })
+          }
+
+          Scenes.items.dotted_big_box_1.set(305, -50, 92).zIndex(5).hide()
+          Scenes.items.dotted_big_box_2.set(305+90, -50, 92).zIndex(5).hide()
+          Scenes.items.dotted_big_box_3.set(305+180, -50, 92).zIndex(5).hide()
+          Scenes.items.dotted_big_box_4.set(305, 50+98, 92).zIndex(5).hide()
+          Scenes.items.dotted_big_box_5.set(305+90, 50+98, 92).zIndex(5).hide()
+          Scenes.items.dotted_big_box_6.set(305+180, 50+98, 92).zIndex(5).hide()
+
+          Scenes.items.dotted_small_box_1.set(85-1, 297, 15).zIndex(5).hide()
+          Scenes.items.dotted_small_box_2.set(121-1, 312, 15).zIndex(5).hide()
+          Scenes.items.dotted_small_box_3.set(155-1, 325, 15).zIndex(5).hide()
+          Scenes.items.dotted_small_box_4.set(190-1, 339, 15).zIndex(5).hide()
+          Scenes.items.dotted_small_box_5.set(226-1, 353, 15).zIndex(5).hide()
+          Scenes.items.dotted_small_box_6.set(53-1, 367, 15).zIndex(5).hide()
+
+          Scenes.items.circuit_upper_layer.set(309, 54, 79, 216).zIndex(10)
+
+
+          //! onclick for proceed btn
+          let btn_proceed = Scenes.items.btn_proceed.zIndex(10)
+          btn_proceed.item.onclick = ()=>{
+            Scenes.items.btn_proceed.hide()
+            Scenes.items.btn_turn_on_t1.set(387, 358 ,40).zIndex(10)
+            Scenes.items.btn_turn_on_t2.set(387, 358 ,40).zIndex(10).hide()
+            Scenes.items.btn_turn_on_t3.set(387, 358 ,40).zIndex(10).hide()
+            Scenes.items.btn_turn_on_t4.set(387, 358 ,40).zIndex(10).hide()
+            Scenes.items.btn_turn_on_t5.set(387, 358 ,40).zIndex(10).hide()
+            Scenes.items.btn_turn_on_t6.set(387, 358 ,40).zIndex(10).hide()
+
+            Scenes.items.small_helper_1.set(91, 300, 10, 10).zIndex(2)
+            Scenes.items.small_helper_2.set(126, 313, 10, 10).zIndex(2)
+            Scenes.items.small_helper_3.set(160, 327, 10, 10).zIndex(2)
+            Scenes.items.small_helper_4.set(196, 341.5, 10, 10).zIndex(2)
+            Scenes.items.small_helper_5.set(230, 355.5, 10, 10).zIndex(2)
+            Scenes.items.small_helper_6.set(58, 368.8, 10, 10).zIndex(2).hide()
+
+
+            Dom.setBlinkArrowRed(true,440, 321,30,30,-90).play()
+            setCC("Turn on thyristor T1 to start the operation")
+
+
+            Scenes.items.big_helper.set(704, -69, 476, 221).zIndex(8).styles({filter: "brightness(200)"})
+
+            Scenes.items.helper_1.set(311, -52, 109, 68).opacity(0.85).zIndex(8)
+            Scenes.items.helper_2.set(410-8, -52, 140, 68).opacity(0.85).zIndex(8)
+            Scenes.items.helper_3.set(500-13, -52, 170, 68).opacity(0.85).zIndex(8)
+            Scenes.items.helper_4.set(311, 70, 175, 68).opacity(0.85).zIndex(8)
+            Scenes.items.helper_5.set(401, 98, 147, 68).opacity(0.85).hide().zIndex(8)
+            Scenes.items.helper_6.set(488, 133, 111, 68).opacity(0.85).zIndex(8)
+
+          }
+          
+          //! onclick for reset button
+          let btn_reset = Scenes.items.btn_restart_waveform.zIndex(11)
+            btn_reset.item.onclick = function(){
+              sliders.resetSlidersValue()
+              partOne()
+              // Scenes.steps[4]()
+            }
+            
+          //! functionality
+
+          let idx = 0
+          function play(){
+
+            function shiftRight(){
+              let left = [ 791, 825, 859, 894, 922]
+              let width = [132, 97, 62, 27,  0]
+              anime({
+                targets: Scenes.items.big_helper.item,
+                left: left[idx],
+                width: width[idx],
+                easing: "linear",
+                duration: 800,
+              })
+            }
+
+            switch(idx){
+              case 0: {
+                setCC("Thyristors T6, T1 are conducting , Turning on of  Thyristor T2  will  turn off the Thyristor T6.")
+                Scenes.items.helper_3.show()
+                Scenes.items.helper_1.hide()
+                Scenes.items.helper_5.hide()
+                shiftRight()
+
+                //* for right side graph
+                Scenes.items.small_helper_1.hide()
+
+                //* for blinking
+                Scenes.items.dotted_big_box_1.show()
+                Scenes.items.dotted_small_box_1.show()
+
+                blink(Scenes.items.dotted_big_box_1)
+                blink(Scenes.items.dotted_small_box_1)
+              }
+              break
+              case 1: {
+                setCC("Thyristors T1, T2 are conducting , Turning on of  Thyristor T3  will  turn off the Thyristor T1.")
+                Scenes.items.helper_5.show()
+                Scenes.items.helper_1.hide()
+                Scenes.items.helper_6.hide()
+                shiftRight()
+
+                //* for right side graph
+
+                Scenes.items.small_helper_6.show()
+                Scenes.items.small_helper_1.hide()
+                Scenes.items.small_helper_2.hide()
+
+                //* for blinking
+
+                Scenes.items.dotted_big_box_1.hide()
+                Scenes.items.dotted_small_box_1.hide()
+
+                Scenes.items.dotted_big_box_6.show()
+                Scenes.items.dotted_small_box_2.show()
+
+                blink(Scenes.items.dotted_big_box_6)
+                blink(Scenes.items.dotted_small_box_2)
+
+                
+              }
+              break
+              case 2: {
+                setCC("Thyristors T2, T3 are conducting , Turning on of  Thyristor T4  will  turn off the Thyristor T2.")
+                Scenes.items.helper_1.show()
+                Scenes.items.helper_2.hide()
+                Scenes.items.helper_6.hide()
+                shiftRight()
+
+                //* for right side graph
+  
+                Scenes.items.small_helper_1.show()
+                Scenes.items.small_helper_2.hide()
+                Scenes.items.small_helper_3.hide()
+
+                //* for blinking
+
+                Scenes.items.dotted_big_box_6.hide()
+                Scenes.items.dotted_small_box_2.hide()
+
+                Scenes.items.dotted_big_box_2.show()
+                Scenes.items.dotted_small_box_3.show()
+
+                blink(Scenes.items.dotted_big_box_2)
+                blink(Scenes.items.dotted_small_box_3)
+              }
+              break
+              case 3: {
+                setCC("Thyristors T3, T4 are conducting , Turning on of  Thyristor T5  will  turn off the Thyristor T3. ")
+                Scenes.items.helper_6.show()
+                Scenes.items.helper_2.hide()
+                Scenes.items.helper_4.hide()
+                shiftRight()
+
+                //* for right side graph
+
+                Scenes.items.small_helper_2.show()
+                Scenes.items.small_helper_3.hide()
+                Scenes.items.small_helper_4.hide()
+
+                //* for blinking
+
+                Scenes.items.dotted_big_box_2.hide()
+                Scenes.items.dotted_small_box_3.hide()
+
+                Scenes.items.dotted_big_box_4.show()
+                Scenes.items.dotted_small_box_4.show()
+
+                blink(Scenes.items.dotted_big_box_4)
+                blink(Scenes.items.dotted_small_box_4)
+              }
+              break
+              case 4: {
+                setCC("Thyristors T4, T5 are conducting , Turning on of  Thyristor T6  will  turn off the Thyristor T4. ")
+                Scenes.items.helper_2.show()
+                Scenes.items.helper_3.hide()
+                Scenes.items.helper_4.hide()
+                shiftRight()
+
+                //* for right side graph
+
+                Scenes.items.small_helper_3.show()
+                Scenes.items.small_helper_4.hide()
+                Scenes.items.small_helper_5.hide()
+
+                //* for blinking
+
+                Scenes.items.dotted_big_box_4.hide()
+                Scenes.items.dotted_small_box_4.hide()
+
+                Scenes.items.dotted_big_box_3.show()
+                Scenes.items.dotted_small_box_5.show()
+
+                blink(Scenes.items.dotted_big_box_3)
+                blink(Scenes.items.dotted_small_box_5)
+              }
+              break
+
+              case 5: {
+                setCC("Press next to go to next step or restart the operation.")
+                Scenes.items.helper_4.show()
+                Scenes.items.helper_3.hide()
+                Scenes.items.helper_5.hide()
+                shiftRight()
+
+                //* for right side graph
+
+                Scenes.items.small_helper_4.show()
+                Scenes.items.small_helper_5.hide()
+                Scenes.items.small_helper_6.hide()
+
+                //* for blinking
+
+                Scenes.items.dotted_big_box_3.hide()
+                Scenes.items.dotted_small_box_5.hide()
+
+                Scenes.items.dotted_big_box_5.show()
+                Scenes.items.dotted_small_box_6.show()
+
+                blink(Scenes.items.dotted_big_box_5)
+                blink(Scenes.items.dotted_small_box_6)
+              }
+              break
+              
+            }
+            idx++;
+          }
+
+          //! onclick for buttons
+          let btn = Scenes.items.btn_turn_on_t1
+          btn.item.onclick = ()=>{
+            items.btn_turn_on_t1.hide()
+            items.btn_turn_on_t2.show()
+            play()
+              items.btn_turn_on_t2.item.onclick = ()=>{
+                items.btn_turn_on_t2.hide()
+                items.btn_turn_on_t3.show()
+                play()
+              }
+                items.btn_turn_on_t3.item.onclick = ()=>{
+                  items.btn_turn_on_t3.hide()
+                  items.btn_turn_on_t4.show()
+                  play()
+                }
+                  items.btn_turn_on_t4.item.onclick = ()=>{
+                    items.btn_turn_on_t4.hide()
+                    items.btn_turn_on_t5.show()
+                    play()
+                  }
+                    items.btn_turn_on_t5.item.onclick = ()=>{
+                      items.btn_turn_on_t5.hide()
+                      items.btn_turn_on_t6.show()
+                      play()
+                    }
+                      items.btn_turn_on_t6.item.onclick = ()=>{
+                        Dom.setBlinkArrowRed(-1)
+                        items.btn_turn_on_t6.hide()
+                        items.btn_restart_waveform.show()
+                        play()
+                        //* After completed
+                        Dom.setBlinkArrow(true, 790, 408).play()
+                        setIsProcessRunning(false)
+                        Scenes.currentStep = 4
+
+                      }
+
+          }
+
+
+          return true
+      }
+
+      function partTwo(){
+
+        btns.forEach((ele)=>{
+          ele.hide()
+        })
+
+        let items = Scenes.items
+
+        //! Requires items 
+        items.part_2_circuit.set(-3, -44, 320).zIndex(1)
+        items.small_helper_1.set(26, 196, 216, 288).zIndex(1)
+        items.small_helper_2.set(678, -51, 474, 279).zIndex(1)
+        items.page_0.set(-6, -77, 487).zIndex(2)
+        items.tab_0_deg.set(369, 309, 36).zIndex(3)
+        items.tab_alpha.set(325, 307, 41)
+
+        setCC("Change the firing angle to see the effect")
+        Dom.setBlinkArrowRed(true,428, 339, 30,30,90).play()
+
+
+        let st = {
+          filter: "hue-rotate(203deg)"
+        }
+      
+        let arrows = [
+          ()=>{
+          },
+          ()=>{
+            Dom.setBlinkArrowRed(true,480, 339, 30,30,90).play()
+          },
+          ()=>{
+            Dom.setBlinkArrowRed(true,529, 339, 30,30,90).play()
+          },
+          ()=>{
+            Dom.setBlinkArrowRed(true,578, 339, 30,30,90).play()
+          },
+          ()=>{
+            Dom.setBlinkArrowRed(true,629, 339, 30,30,90).play()
+          },
+          ()=>{
+            
+          }
+        ]
+        
+        let pages = [
+          items.page_0.set(-6, -77, 487),
+          items.page_1.set(-6, -77, 487).hide().zIndex(2),
+          items.page_2.set(-6, -77, 487).hide().zIndex(2),
+          items.page_3.set(-6, -77, 487).hide().zIndex(2),
+          items.page_4.set(-6, -77, 487).hide().zIndex(2),
+          items.page_5.set(-6, -77, 487).hide().zIndex(2),
+        ]
+        
+        let degrees = [
+          items.tab_0_deg.set(369, 309, 36).zIndex(3),
+          items.tab_30_deg.set(418, 309, 36).zIndex(3),
+          items.tab_60_deg.set(418+50, 309, 36).zIndex(3),
+          items.tab_90_deg.set(416+100, 309, 36).zIndex(3),
+          items.tab_120_deg.set(418+147, 309, 36).zIndex(3),
+          items.tab_150_deg.set(418+195, 309, 36).zIndex(3),
+        ]
+        
+        function hideAllPages (){
+          items.page_0.hide()
+          pages.forEach((ele)=>{
+            ele.hide()
+          })
+        }
+        
+        degrees[0].styles(st)
+        degrees.forEach((ele, idx) =>{
+          setCC("Change the firing angle to see the effect")
+          ele.item.onclick = ()=>{
+            degrees.forEach(ele=>{
+              ele.styles({
+                filter: "",
+              })
+            })
+            arrows[idx]()
+            ele.styles(st)
+            hideAllPages()
+            pages[idx].show()
+            if(idx == 5){
+              Dom.setBlinkArrowRed(-1)
+              //* After completed
+                Dom.setBlinkArrow(true, 790, 408).play()
+                setIsProcessRunning(false)
+                if(Scenes.optionsDone[0]==1 && Scenes.optionsDone[1]==1){
+                  Scenes.currentStep = 5
+                }
+                return true
+
+            }
+          }
+        })
+
+      }
+
+    }),
+
+   //! part 3 Perform analysis
+    (step4 = function () {
       Dom.hideAll(); 
       // optionsDone
       setIsProcessRunning(true);
@@ -1774,25 +2267,44 @@ concept_development: new Dom(".concept_development"),
         "",
         ""
       )
+      Scenes.hideStepHeading()
+      
+      // ! step completed then to this
+      if(Scenes.currentLoad == 2){
+        Scenes.currentLoad = 1
+      }else if(Scenes.currentLoad == 1){
+        Scenes.currentLoad = 2
+      }
+
+      // reset load parameters
+      Scenes.items.load_1.removeClass("load-active")
+      Scenes.items.load_1.removeClass("load-deactive")
+      Scenes.items.load_2.removeClass("load-deactive")
+      Scenes.items.load_2.removeClass("load-active")
+      
       // ! to hide slider
       // sliders.hideAll()
       //!new added for EE12
       Scenes.items.part3_table_three.set(10)
 
-      Scenes.items.part_3_circuit.set(0, -68, 212)  
+      Scenes.items.part_3_circuit.set(-4, -46, 159)  
       // Scenes.items.part_3_option_1_load_1.set(25, 97, 55).zIndex(2)
-      Scenes.items.part_3_option_1_load_1.set(45, 97, 55).zIndex(2)
-      Scenes.items.part_3_option_1_load_2.set(175, 97, 55).zIndex(2)
-      Scenes.items.part_3_option_1_alpha_vs.set(608, -81, 113)
-      Scenes.items.option_1_tab_1.set(611 - 18, 12, 65).opacity(0.4)
-      Scenes.items.option_1_tab_2.set(611 - 18 + 70, 12, 65).opacity(0.4)
-      Scenes.items.option_1_tab_3.set(611 - 18 + 140, 12, 65).opacity(0.4)
-      Scenes.items.option_1_tab_4.set(611 - 18 + 210, 12, 65).opacity(0.4)
-      Scenes.items.option_1_tab_5.set(611 - 18 + 280, 12, 65).opacity(0.4)
+      Scenes.items.load_1.set(444, -50, 55).zIndex(2)
+      Scenes.items.load_2.set(444, 18, 55).zIndex(2)
+      Scenes.items.text_performance_characteristic.set(623, -81, 46)
+      let tabLeftIdx = 0
+      let tabWidth = 77
+      Scenes.items.tab_1.set(572 + (73.6 * tabLeftIdx++), 42, 55, tabWidth).opacity(0.4)
+      Scenes.items.tab_2.set(572 + (73.6 * tabLeftIdx++), 42, 55, tabWidth).opacity(0.4)
+      Scenes.items.tab_3.set(573 + (73.6 * tabLeftIdx++), 42, 55, tabWidth).opacity(0.4)
+      Scenes.items.tab_4.set(574 + (73.6 * tabLeftIdx++), 42, 55, tabWidth).opacity(0.4)
+      Scenes.items.tab_5.set(574 + (73.1 * tabLeftIdx++), 42, 55, tabWidth).opacity(0.4)
+      
+      Scenes.items.tempTitle24.setContent("Firing Angle (in degree)").set(56,180,null,217).zIndex(1002).styles({color: "red"})
 
-      Scenes.items.btn_record.set(591, 362, 42)
-      Scenes.items.btn_delete.set(591 +150, 362, 42)
-      Scenes.items.btn_reset_3.set(591 +250, 362, 50)
+      Scenes.items.btn_record.set(620, 362, 42)
+      Scenes.items.btn_delete.set(620 +130, 362, 42)
+      Scenes.items.btn_reset_2.set(620 +223, 362, 42)
       sliders.resetSlidersValue()
       sliders.showAll()
 
@@ -1819,7 +2331,15 @@ concept_development: new Dom(".concept_development"),
       let isLoadAndInductanceSelected = false
 
       // ! onclick for load selecting buttons
-      Scenes.items.part_3_option_1_load_1.item.onclick = ()=>{
+      let updateCurrentLoadParameter = ()=>{}
+      Scenes.items.load_1.item.onclick = ()=>{
+        console.log(Scenes.currentLoad)
+        if(Scenes.currentLoad !=0 && Scenes.currentLoad == 2){
+          return
+        }
+        updateCurrentLoadParameter = ()=>{
+          Scenes.currentLoad = 1
+        }
         resistanceValue = 10
         inductanceValue = 40
         isLoadAndInductanceSelected = true
@@ -1827,22 +2347,29 @@ concept_development: new Dom(".concept_development"),
         // betaTempText.setContent(Formulas.r_l_load.betaDeg(values))
         // phyTempText.setContent(Formulas.r_l_load.phy(values))
 
-        Scenes.items.part_3_option_1_load_1.addClass("load-active")
-        Scenes.items.part_3_option_1_load_2.addClass("load-deactive")
-        Scenes.items.part_3_option_1_load_1.item.onclick = ()=>{}
-        Scenes.items.part_3_option_1_load_2.item.onclick = ()=>{}
-        Scenes.items.part_3_option_1_load_1.removeClass("btn-img")
-        Scenes.items.part_3_option_1_load_2.removeClass("btn-img") 
+        Scenes.items.load_1.addClass("load-active")
+        Scenes.items.load_2.addClass("load-deactive")
+        Scenes.items.load_1.item.onclick = ()=>{}
+        Scenes.items.load_2.item.onclick = ()=>{}
+        Scenes.items.load_1.removeClass("btn-img")
+        Scenes.items.load_2.removeClass("btn-img") 
 
         //* to click ac voltage
-        Dom.setBlinkArrowRed(true,125, -36,30, null,-90).play()
+        Dom.setBlinkArrowRed(true,122, -36,30, null,-90).play()
         setCC("Set AC input voltage.")
 
         // * show blink arrow
         // Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
         // setCC("Press the 'Record' Button")
       }
-      Scenes.items.part_3_option_1_load_2.item.onclick = ()=>{
+      Scenes.items.load_2.item.onclick = ()=>{
+        console.log(Scenes.currentLoad)
+        if(Scenes.currentLoad !=0 && Scenes.currentLoad == 1){
+          return
+        }
+        updateCurrentLoadParameter = ()=>{
+          Scenes.currentLoad = 2
+        }
         resistanceValue = 20
         inductanceValue = 40
         isLoadAndInductanceSelected = true
@@ -1850,15 +2377,15 @@ concept_development: new Dom(".concept_development"),
         // betaTempText.setContent(Formulas.r_l_load.betaDeg(values))
         // phyTempText.setContent(Formulas.r_l_load.phy(values))
 
-        Scenes.items.part_3_option_1_load_1.addClass("load-deactive")
-        Scenes.items.part_3_option_1_load_2.addClass("load-active")
-        Scenes.items.part_3_option_1_load_1.item.onclick = ()=>{}
-        Scenes.items.part_3_option_1_load_2.item.onclick = ()=>{}
-        Scenes.items.part_3_option_1_load_1.removeClass("btn-img")
-        Scenes.items.part_3_option_1_load_2.removeClass("btn-img") 
+        Scenes.items.load_1.addClass("load-deactive")
+        Scenes.items.load_2.addClass("load-active")
+        Scenes.items.load_1.item.onclick = ()=>{}
+        Scenes.items.load_2.item.onclick = ()=>{}
+        Scenes.items.load_1.removeClass("btn-img")
+        Scenes.items.load_2.removeClass("btn-img") 
 
         //* to click ac voltage
-        Dom.setBlinkArrowRed(true,125, -36,30, null,-90).play()
+        Dom.setBlinkArrowRed(true,122, -36,30, null,-90).play()
         setCC("Set AC input voltage.")
         // // * show blink arrow
         // Dom.setBlinkArrowRed(true,788,300,null,null,-90).play()
@@ -1876,12 +2403,21 @@ concept_development: new Dom(".concept_development"),
       // Dom.setBlinkArrowRed(true,0,0,30,null,-90)
       function stepTutorial2(){
 
-        Dom.setBlinkArrowRed(true,155, 63,30,null,-90).play()
-        setCC("Select the load parameters")
+        // * for showing different load arrow after one seelcted
+        if(Scenes.currentLoad == 0){
+          Dom.setBlinkArrowRed(true,400, 0,30,null,-180).play()
+        }
+        else{
+          if(Scenes.currentLoad == 1){
+            Dom.setBlinkArrowRed(true,400, -40,30,null,-180).play()
+          }
+          else{
+            Dom.setBlinkArrowRed(true,400, 32,30,null,-180).play()
+          }
+        }
+        setCC("Here, choose load, set the AC source voltage and vary the firing angles and generate observations.")
         
-    
-
-        // reset slider d onclick
+        
         sliders.v_knob.onclick = ()=>{
           sliders.sliderV(()=>{
             Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
@@ -1889,9 +2425,11 @@ concept_development: new Dom(".concept_development"),
           })
           sliders.v_knob.click()
           // Dom.setBlinkArrowRed(true,505,-12,30,null,180).play()
-       
+        }
 
-        
+        sliders.d.onclick = ()=>{
+          Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
+          setCC("Press the 'Record' Button")
         }
       }
       if(recordBtnClickIdx == 0){
@@ -1904,7 +2442,7 @@ concept_development: new Dom(".concept_development"),
 
       let graph_box_height = 239
       let graph_box_top = 90
-      let dataLabelX = "Source Voltage (V<sub>s</sub>)"
+      let dataLabelX = "Firing angle (α)"
       
       // ! Forshowing dummy graph
       Scenes.items.graph_box_0.set(null, graph_box_top, graph_box_height)
@@ -1945,30 +2483,30 @@ concept_development: new Dom(".concept_development"),
           labels: [
             "Vo",
             "Io",
-            "Id_avg",
-            "Iin_avg",
+            "It_avg",
+            "Iin_rms",
             "PF",
           ],
           colors: [
-            "#c00000",
-            "#2208e1",
-            "#007434",
-            "#c55a11",
-            "#7030a0" 
+            "#d26315",
+            "#0d7d0d",
+            "#cc0505",
+            "#e200e2",
+            "#7937aa" 
           ],
           datas:[],
         }
         let yLabels = [
           "Output Voltage (V<sub>0</sub>)",
           "Output Current (I<sub>0</sub>)",
-          "Diode Current (I<sub>0</sub>)",
+          "Device Current (I<sub>T</sub>)",
           "Source Current (I<sub>in</sub>)",
           "Power Factor",
         ]
         function getDataFromTable(){
           let datas_XY = [] // v0,i0,p0,PF,THD
-          let indexForTableColunmDataY = [2,3,6,4,8,7,5]
-          let indexForTableColumnDataX = 1
+          let indexForTableColunmDataY = [3,4,7,8,5,6,9]
+          let indexForTableColumnDataX = 2
           indexForTableColunmDataY.forEach(col_idx=>{
             let datas = []
             let rows = table.tBodies[0].rows
@@ -2005,8 +2543,8 @@ concept_development: new Dom(".concept_development"),
             // ! for second tab graph where (two dataset exist)
             let mergeIdxStart = 2
             if(idx == mergeIdxStart || idx == mergeIdxStart + 1){
-              let labels = ["Id_rms", "Iin_1"]
-              let colors = ["#e620e6","#e200e2"]
+              let labels = ["It_rms", "Iin_1"]
+              let colors = ["#c55a11","#c00000"]
               let dataIdx = [5, 6] // it is ref idx for data 
               let localIdx = idx - mergeIdxStart
               // for i0 and iSCR
@@ -2044,35 +2582,40 @@ concept_development: new Dom(".concept_development"),
                 // rightTicks[i].opacity(1)
               }
               Dom.setBlinkArrowRed(-1)
-              setTimeout(() => {
-                setCC("Simulation Done");
-                // Dom.setBlinkArrow(true, 790, 544).play();
-                // setIsProcessRunning(false);
-                Scenes.currentStep = 4
-              }, 12000);
               // showArrowForAll()
-              setCC("In AC voltage controller the waveform distortion is more at higher AC voltages and thus THD is high.")
+              if(Scenes.currentLoad > 0){
+                setCC("Here the  input power factor decreases with increase in firing angle.").onend = ()=>{
+                  setCC("Simulation Done");
+                  // Scenes.currentStep = 4
+                }
+              }else{
+                updateCurrentLoadParameter()
+                setCC("Here the  input power factor decreases with increase in firing angle.").onend = ()=>{
+                  Dom.setBlinkArrowRed(true,867, 328,30,null,-90).play()
+                  setCC("Press reset button to get the performance with other load.")
+                }
+              }
             },
             arrows: [
-              ()=>Dom.setBlinkArrowRed(true,680,85,30,null,90).play(),
-              ()=>Dom.setBlinkArrowRed(true,750,85,30,null,90).play(),
-              ()=>Dom.setBlinkArrowRed(true,820,85,30,null,90).play(),
-              ()=>Dom.setBlinkArrowRed(true,890,85,30,null,90).play(),
+              ()=>Dom.setBlinkArrowRed(true,590+70,5,30,null,-90).play(),
+              ()=>Dom.setBlinkArrowRed(true,590+140,5,30,null,-90).play(),
+              ()=>Dom.setBlinkArrowRed(true,590+215,5,30,null,-90).play(),
+              ()=>Dom.setBlinkArrowRed(true,590+290,5,30,null,-90).play(),
             ],
             texts: [
-              "Here, DC output voltage variation with input ac supply voltage is shown. The DC output voltage increases with increase in ac input voltage.",
-              "The DC load current increases with increase in ac input voltage.",
-              "",
-              "The ac source current and its fundamental component increases with increase in ac input voltage.",
-              "In diode bridge rectifier the input power factor is independent of load and it is constant."
+              "Here the average load voltage decreases with increase in firing angle. The average load voltage is negative for firing angle more than 90 degrees.",
+              "Here the  average load current decreases with increase in firing angle.",
+              "Here the device current decreases with increase in firing angle.",
+              "Here the source current decreases with increase in firing angle.",
+
             ]
           }
           let btns = [
-            Scenes.items.option_1_tab_1,
-            Scenes.items.option_1_tab_2,
-            Scenes.items.option_1_tab_3,
-            Scenes.items.option_1_tab_4,
-            Scenes.items.option_1_tab_5,
+            Scenes.items.tab_1,
+            Scenes.items.tab_2,
+            Scenes.items.tab_3,
+            Scenes.items.tab_4,
+            Scenes.items.tab_5,
           ]
 
           btns.forEach((btn,idx)=>{
@@ -2083,26 +2626,26 @@ concept_development: new Dom(".concept_development"),
               //* for conclusion
               switch(idx){
                 case 0: 
-                  conclusionFront = "Here the load voltage increases linearly with the source voltage"
+                  conclusionFront = "Here, the load voltage decreases with increase in firing angle."
                   break;
                 
                 case 1: 
-                  conclusionFront = "Here the load current increases linearly with the source voltage"
+                  conclusionFront = "Here, the load current decreases with increase in firing angle."
                   break;
                 
                 case 2: 
-                  conclusionFront = "Here the Diode current increases linearly with the source voltage"
+                  conclusionFront = "Here, the Thyristor current decreases with increase in firing angle."
                   break;
                 
                 case 3: 
-                  conclusionFront = "Here the source current increases linearly with the source voltage"
+                  conclusionFront = "Here, the source current decreases with increase in firing angle."
                   break;
                   
                 case 4: 
-                  conclusionFront = "Here the power factor is constant irrespective of the source voltage"
+                  conclusionFront = "Here, the input power factor decreases with increase in firing angle."
                   break;
               }
-              Scenes.items.tempTitle1.set(null, -74, null, 393).setContent(conclusionFront).addClass("conclusion").zIndex(2000).item
+              Scenes.items.tempTitle1.set(287, 120, 77, 282).setContent(conclusionFront).addClass("conclusion").zIndex(2000).item
 
               for(let gb of ctxs.graph_box){
                 gb.hide()
@@ -2135,7 +2678,7 @@ concept_development: new Dom(".concept_development"),
       }
 
       //* to check conclusion appearance
-      // Scenes.items.tempTitle1.set(null, -74,108, 301 ).setContent("lorem20sdhs jfjdsf ajhs;as hdf asdlhf").addClass("conclusion").zIndex(2000).item
+      // Scenes.items.tempTitle1.set(287, 96, 67, 282 ).setContent("lorem20sdhs jfjdsf ajhs;as hdf asdlhf").addClass("conclusion").zIndex(2000).item
 
 
       // ! ------------> If data already present plot the graph
@@ -2169,7 +2712,7 @@ concept_development: new Dom(".concept_development"),
           return
         }
         let rows = table.tBodies[0].rows
-        let n = 9
+        let n = 10
         
         for(let i=1;i<n;i++){
           rows[recordBtnClickIdx-1].cells[i].innerHTML = "" ;
@@ -2178,13 +2721,14 @@ concept_development: new Dom(".concept_development"),
         if(recordBtnClickIdx==0){
           // disableSlider("reset")
         }
+        valuesToMatch.pop()
       }
 
       //! onclick for reset 
-      Scenes.items.btn_reset_3.item.onclick = function(){
+      Scenes.items.btn_reset_2.item.onclick = function(){
         var rows = table.tBodies[0].rows
         let n=7
-        let m=9
+        let m=10
   
         for(let i=0;i<n;i++){
           for(let j=1;j<m;j++){
@@ -2197,15 +2741,9 @@ concept_development: new Dom(".concept_development"),
         // so just simply call this step again
         // sliders.reset()
 
-        // reset load parameters
-        Scenes.items.part_3_option_1_load_1.removeClass("load-active")
-        Scenes.items.part_3_option_1_load_2.removeClass("load-active")
-        Scenes.items.part_3_option_1_load_1.removeClass("load-deactive")
-        Scenes.items.part_3_option_1_load_2.removeClass("load-deactive")
-        Scenes.steps[4]()
+        Scenes.steps[5]()
       }
 
-      let currentTableIdx = 0
       // ! onclick for record
       Scenes.items.btn_record.item.onclick = function(){
         if(!isLoadAndInductanceSelected){
@@ -2214,28 +2752,31 @@ concept_development: new Dom(".concept_development"),
           return  
         }
         // for arrow system
-         if(recordBtnClickIdx >= 0 && recordBtnClickIdx < 6){
-          Dom.setBlinkArrowRed(true,125, -36,30, null,-90).play()
-          setCC("Set AC input voltage.")
-        }else{
+        if(recordBtnClickIdx < 1){
+          Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
+          setCC("Press the 'Record' Button")
+        }
+        else if(recordBtnClickIdx >= 1 && recordBtnClickIdx < 6){
+          Dom.setBlinkArrowRed(true,10, 160,30, null,-270).play()
+          setCC("Change the firing angle")
+        }else if(recordBtnClickIdx == 6 ){
           Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
           setCC("Press the 'Record' Button")
         }
         // dutyRatioValue/d is AC voltage
         vInValue = Number(sliders.v.value)
-        // dutyRatioValue = Number(sliders.d.value)
-        // * for default two values
-        // if(recordBtnClickIdx == 0 || recordBtnClickIdx == 1){
-        //   dutyRatioValue = recordBtnClickIdx==0 ? 0:170
-        // }
-        // updateValues(vInValue,dutyRatioValue,resistanceValue,inductanceValue)
-        updateValues(vInValue, 0, resistanceValue, inductanceValue )
+        dutyRatioValue = Number(sliders.d.value)
+        // ! for default two values
+        if(recordBtnClickIdx == 0 || recordBtnClickIdx == 1){
+          dutyRatioValue = recordBtnClickIdx==0 ? 0:150
+        }
+        updateValues(vInValue,dutyRatioValue,resistanceValue,inductanceValue)
         // ! Can't select same values
-        if(recordBtnClickIdx < 7 && valuesToMatch.indexOf(vInValue)!=-1){
-          setCC("Please select different AC voltage.")
+        if(recordBtnClickIdx < 7 && valuesToMatch.indexOf(dutyRatioValue)!=-1){
+          setCC("Please select different firing angle.")
           return
         }else{
-          valuesToMatch.push(vInValue)
+          valuesToMatch.push(dutyRatioValue)
         }
 
         // ! sort the data
@@ -2267,8 +2808,10 @@ concept_development: new Dom(".concept_development"),
 
           // ! Graph Tab Buttons click
           function graphTabButtonArrows(){
-            Dom.setBlinkArrowRed(true,610,85,30,null,90).play()
-            setCC("Plot output voltage variation with AC voltage characteristics")
+            window.speechSynthesis.cancel()
+            setCC("")
+            Dom.setBlinkArrowRed(true,590,5,30,null,-90).play()
+            setCC("Here, experimental observations need to be obtained by choosing load and setting different AC input voltages.")
             // refer to plotGraphs() area
           }
           graphTabButtonArrows()
@@ -2289,13 +2832,14 @@ concept_development: new Dom(".concept_development"),
         }
         let tableRow = table.tBodies[0].rows[recordBtnClickIdx++]
         tableRow.cells[1].innerHTML = vInValue
-        tableRow.cells[2].innerHTML = Number(Formulas.part_3.v0(values)).toFixed(2)
-        tableRow.cells[3].innerHTML = Number(Formulas.part_3.i0(values)).toFixed(2)
-        tableRow.cells[4].innerHTML = Number(Formulas.part_3.iIn_rms(values)).toFixed(2)
-        tableRow.cells[5].innerHTML = Number(Formulas.part_3.iIn_1(values)).toFixed(2)
-        tableRow.cells[6].innerHTML = Number(Formulas.part_3.iD_avg(values)).toFixed(2)
-        tableRow.cells[7].innerHTML = Number(Formulas.part_3.iD_rms(values)).toFixed(2)
-        tableRow.cells[8].innerHTML = Number(Formulas.part_3.pf(values)).toFixed(2)
+        tableRow.cells[2].innerHTML = dutyRatioValue
+        tableRow.cells[3].innerHTML = Number(Formulas.part_3.v0(values)).toFixed(2)
+        tableRow.cells[4].innerHTML = Number(Formulas.part_3.i0(values)).toFixed(2)
+        tableRow.cells[5].innerHTML = Number(Formulas.part_3.iIn_rms(values)).toFixed(2)
+        tableRow.cells[6].innerHTML = Number(Formulas.part_3.iIn_1(values)).toFixed(2)
+        tableRow.cells[7].innerHTML = Number(Formulas.part_3.iT_avg(values)).toFixed(2)
+        tableRow.cells[8].innerHTML = Number(Formulas.part_3.iT_rms(values)).toFixed(2)
+        tableRow.cells[9].innerHTML = Number(Formulas.part_3.pf(values)).toFixed(2)
         // added a display none column
         // tableRow.cells[9].innerHTML = Number(Formulas.r_load.iSCR(values)).toFixed(2)
 
@@ -2320,6 +2864,19 @@ concept_development: new Dom(".concept_development"),
       return true;
 
     }),
+
+    // ! dummy step
+    // (step5 = function (){
+    //   Scenes.items.part_3_circuit.set(-4, -46, 159)  
+    //   sliders.resetSlidersValue()
+    //   sliders.showAll()
+    //   Scenes.items.part3_table_three.set(10)
+    //   Scenes.setStepHeading(
+    //     "",
+    //     ""
+    //   )
+    //   // setIsProcessRunning(true);
+    // }),
   ],
   back() {
     //! animation isRunning
@@ -2354,7 +2911,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 2
+Scenes.currentStep = 2  
 
 Scenes.next()
 // Scenes.steps[3]()
