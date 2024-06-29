@@ -2735,8 +2735,8 @@ concept_development: new Dom(".concept_development"),
             rows[i].cells[j].innerHTML = "";
           }
         }
-        // rows[0].cells[2].innerHTML = 0
-        // rows[1].cells[2].innerHTML = 170
+        rows[0].cells[2].innerHTML = 0
+        rows[1].cells[2].innerHTML = 150
         // reset all the parameters
         // so just simply call this step again
         // sliders.reset()
