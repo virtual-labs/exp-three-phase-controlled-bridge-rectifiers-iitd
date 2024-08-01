@@ -1267,7 +1267,7 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.part_1_components.set(4, 3, 410, 923)
       Scenes.items.btn_verify.set(740, -36, 49).zIndex(1)
       Scenes.items.btn_reset.set(740+120, -36, 52).zIndex(1)
-      let blinkText = Scenes.items.part_1_text.set(197,4,100)
+      let blinkText = Scenes.items.part_1_text.set(198, -9, 117)
       anime({
         targets: blinkText.item,
         loop: true,
