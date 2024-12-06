@@ -14,3 +14,7 @@ b). If connections are wrong, press the “RESET” button and reconnect the ter
 2. Select the load out of the options given<br>
 3. Change the firing angle and click on “RECORD” button to fill the table.<br>
 4. Click on respective “ICONS” to see the various performance analysis plots.<br>
+
+<center>
+  <img src="images/proced1.png" height="220px">
+</center>
