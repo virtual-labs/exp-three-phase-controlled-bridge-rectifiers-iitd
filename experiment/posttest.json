@@ -12,7 +12,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2 Substituting AC input voltage and the firing angle values in the following expression <img src='images/expl3.png' height='70px'>  gives average DC output voltage.",
+        "b": "Explanation 2: Substituting AC input voltage and the firing angle values in the following expression <img src='images/expl3.png' height='70px'>  gives average DC output voltage.",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -30,10 +30,10 @@
         "d": "Yes, by changing the phase sequence of source voltage"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Substituting firing angle of 90 degrees in the following expression <img src='images/expl3.png' height='70px'> gives average DC output voltage as zero.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -51,7 +51,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3 <img src='images/expl4.png' height='70px'>",
+        "c": "Explanation 3: <img src='images/expl4.png' height='70px'>",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -69,9 +69,9 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "b": "Explanation 2: With resistive load the input current will be pulsating in nature.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -88,10 +88,10 @@
         "d": "sometimes 2 and sometimes 3, depending on the mode of operation."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: At any given time one SCR conducts from the upper group and one conducts from the lower group.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
