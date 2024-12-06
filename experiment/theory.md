@@ -9,7 +9,9 @@ Fig. 1. Circuit configuration of 3-phase controlled bridge rectifier.
 
 </center>
 <br>
-The principle of operation of the above circuit can easily be understood from the waveforms given in Fig. 2. The output voltage of a bridge rectifier exhibits a six-pulse waveform with ripple frequency equal to six times the input supply frequency. The thyristors are sequentially numbered (T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub>, T<sub>4</sub>, T<sub>5</sub> and T<sub>6</sub>) based on their conduction sequences, with each thyristor conducting for 120&#176; duration. The thyristor connected between the supply lines with the highest instantaneous line-to-line voltage will be forward biased and starts conducting on applying gate pulse to it.
+The principle of operation of the above circuit can easily be understood from the waveforms given in Fig. 2. The output voltage of a bridge rectifier exhibits a six-pulse waveform with ripple frequency equal to six times the input supply frequency. The thyristors are sequentially numbered (T<sub>1</sub>, T<sub>2</sub>, T<sub>3</sub>, T<sub>4</sub>, T<sub>5</sub> and T<sub>6</sub>) based on their conduction sequences, with each thyristor conducting for 120&#176; duration. The thyristor connected between the supply lines with the highest instantaneous line-to-line voltage will be forward biased and starts conducting on applying gate pulse to it.<br>
+However when the firing angle is greater than 90 degree the output voltage will be –ve DC as shown in figure 3(d) and 3(e). In such case a negative DC voltage source 
+on dc side is required [3] so that the direction of thyristor current remain same. Generally this type of action takes place in case of regenerative mode of the system.
 <br>
 
 <center>
