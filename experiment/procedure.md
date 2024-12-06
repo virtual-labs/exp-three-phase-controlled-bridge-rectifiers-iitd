@@ -1,5 +1,9 @@
 ### Procedure
 
+<center>
+  <img src="images/procedbig1.png">
+</center>
+
 #### a) Circuit formulation:<br>
 1. Connect the circuit to form a 3-phase controlled full bridge rectifier<br>
 2. Click on “CHECK” button to verify the circuit.<br>
