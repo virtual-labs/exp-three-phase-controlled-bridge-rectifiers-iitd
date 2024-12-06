@@ -12,7 +12,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2: Substituting AC input voltage and the firing angle values in the following expression <img src='images/expl3.png' height='70px'>  gives average DC output voltage.",
+        "b": "Explanation 2: Substituting AC input voltage and the firing angle values in the following expression <img src='images/expl3.png' height='60px'>  gives average DC output voltage.",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },
@@ -32,7 +32,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3: Substituting firing angle of 90 degrees in the following expression <img src='images/expl3.png' height='70px'> gives average DC output voltage as zero.",
+        "c": "Explanation 3: Substituting firing angle of 90 degrees in the following expression <img src='images/expl3.png' height='60px'> gives average DC output voltage as zero.",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
@@ -51,7 +51,7 @@
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3: <img src='images/expl4.png' height='70px'>",
+        "c": "Explanation 3: <img src='images/expl4.png' height='60px'>",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
