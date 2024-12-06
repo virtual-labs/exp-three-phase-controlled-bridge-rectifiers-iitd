@@ -11,10 +11,10 @@
         "d": "DC and it is controllable with source voltage and firing angle both."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: For the three-phase controlled rectifier the average output voltage is <img src='images/expl3.png' height='60px'> This expression clearly indicates that average output voltage is dependent on both the  source voltage and firing angle."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -30,10 +30,10 @@
         "d": "18 pulse waveform."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: It is a six-pulse rectifier and hence output voltage waveform exhibits 6-pulse waveform.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -49,10 +49,10 @@
         "d": "120 degrees"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Frequency of output voltage will be six times of the supply frequency.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -68,10 +68,10 @@
         "d": "Greater than 90 degrees"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4: <img src='images/expl3.png' height='60px'> From this expression for firing angle higher than 90 degree the output voltage will be negative."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -87,10 +87,10 @@
         "d": "Three-times the supply frequency."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2: Each thyristor is turned-ON only once in each AC input voltage cycle. Hence, the thyristor firing pulse frequency is same as supply frequency.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
