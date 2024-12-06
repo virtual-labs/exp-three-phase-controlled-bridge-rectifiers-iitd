@@ -11,10 +11,10 @@
         "d": "410 V"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Explanation 1",
+        "b": "Explanation 2 Substituting AC input voltage and the firing angle values in the following expression <img src='images/expl3.png' height='70px'>  gives average DC output voltage.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -49,10 +49,10 @@
         "d": "0.955 (Leading)"
       },
       "explanations": {
-        "a": "Explanation 1  <img src='images/expl4.png' height='300px'>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3 <img src='images/expl4.png' height='70px'>",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -68,7 +68,7 @@
         "d": "Source current waveform will be shifted by 90 degrees."
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
         "c": "Explanation 2",
         "d": "Explanation 2"
