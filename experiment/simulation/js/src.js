@@ -152,6 +152,7 @@ const src = {
             val_r: this.allImgsDom[index++],
             val_v: this.allImgsDom[index++],
 
+          formulas_procedure_slider_1: this.allImgsDom[index++],
 
       //! EE16 images end here
 
