@@ -41,17 +41,18 @@
     
     {
 
-      "question": "3. The maximum peak-to-peak output DC voltage occurs at a firing angle of",
+      "question": "3. A 50 Hz, 3-phase balanced AC supply is given to a 3-phase controlled rectifier.  What will be the frequency of output load voltage?",
       "answers": {
-        "a": "30 degrees",
-        "b": "60 degrees",
-        "c": "90 degrees",
-        "d": "120 degrees"
+        "a": "50 Hz",
+        "b": "100 Hz",
+        "c": "300 Hz",
+        "d": "600 Hz"
       },
+
       "explanations": {
         "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 3: Frequency of output voltage will be six times of the supply frequency.",
+        "c": "Explanation 3: Fequency of output voltage will be six times of the supply frequency.",
         "d": "Explanation 4"
       },
       "correctAnswer": "c",
