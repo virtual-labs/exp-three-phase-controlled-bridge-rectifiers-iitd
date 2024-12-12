@@ -292,3 +292,5 @@ On substituting the values from eqns, (12) and (13)
     ..(15)
 
 </div>
+
+#### ("For more Information on mathematical analysis, see references")
