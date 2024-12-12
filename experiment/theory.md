@@ -293,4 +293,6 @@ On substituting the values from eqns, (12) and (13)
 
 </div>
 
+<div style="float: left; width:100%;"><br>
 #### ("For more Information on mathematical analysis, see references")
+<br></div>
