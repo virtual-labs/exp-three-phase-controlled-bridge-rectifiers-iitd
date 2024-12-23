@@ -1,0 +1,213 @@
+.universal-slider{
+    position: absolute;
+    top: -30px;
+    left:-10px;
+}
+.universal-slider .slider-circuit{
+    height: 200px;
+    position: relative;
+    z-index: 20;
+}
+.universal-slider .slider-circuit-helper{
+    position: absolute;
+    height: 100px;
+    left: 75.5px;
+    top: 82px;
+    z-index: 30;
+}
+.slider .slider_R,.range-slider{
+    position: absolute;
+    left: 473px;
+    top: 115px;
+    z-index: 499;
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(-90deg);
+    width: 80px;
+    height: 30px;
+    height: 10px;
+    border-radius: 5px;
+    /* background: #d3d3d3; */
+    background: transparent;
+    outline: none;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider .slider_R::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background: url('../src/images/sliders/slider_tip.png');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(90deg);
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+.slider .slider_D::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background: url('../src/images/sliders/slider_D_tip.png');
+    background-position: center;
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.slider .slider_R:hover,.range-slider:hover{
+    /* background-color: black; */
+    opacity: 1;
+}
+
+.slider .slider_R+img{
+    position: absolute;
+    left: 489px;
+    top: 86px;
+    width: 46px;
+    z-index: 498;
+}
+.slider .slider-R-back{
+    position: absolute;
+    left: 464px;
+    top: 62px;
+    height: 123px;
+}
+.slider .r .value-box input{
+    font-size: 11px;
+}
+.slider .value-box{
+    background-color: white;
+    text-align: black;
+    border: 1px solid black;
+    width: fit-content;
+    display: flex;
+    padding: 0 3px;
+}
+.slider .value-box input{
+    border: none;
+    outline: none;
+    width: 26px;
+    font-weight: bold;
+}
+
+/* ! Fix positions of all slider input value */
+.slider .r .value-box{
+    font-size: 12px;
+    padding: 0 4px;
+    position: absolute;
+    left: 504px;
+    top: 67px;
+    z-index: 500;
+}
+/* slider d */
+.slider .slider_D{
+    transform: rotate(0deg);
+    left: 39px;
+    top: 179.8px;
+    width: 188.5px;
+    background-color: transparent;
+}
+
+.slider .d .value-box{
+    border-radius: 4px;
+    font-weight: 100;
+    width: 33px;
+    padding: 0px 3px;
+    position: absolute;
+    left: 253px;
+    top: 154px;
+    z-index: 500;
+}
+.slider .d .value-box input{
+    padding: 0 1px 3px 1px;
+    background: transparent;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    width: 32px;
+    font-weight: bold;
+}
+.slider .d .slider-D-body{
+    position: absolute;
+    left: 42px;
+    top: 145.5px;
+    height: 72px;
+}
+
+.slider .d .slider-D-helper{
+    height: 72px;
+    width: 249px;
+    left: 41px;
+    top: 142.8px;
+    position: absolute;
+}
+
+.slider .d .slider-D-arrow{
+    position: absolute;
+    left: -172.5px;
+    top: 151px;
+    height: 79px;
+}
+
+.slider .slider-D-body.back{
+    z-index: 10;
+}
+.slider .slider-D-helper{
+    z-index: 30;
+}
+.slider .slider-D-arrow{
+    z-index: 20;
+}
+.slider .slider-D-body.bottom{
+    z-index: 15;
+}
+
+
+/* slider v */
+.slider .v .meter{
+    width: 113px;
+    position: absolute;
+    top: 12px;
+    left: 70px;
+}
+
+.slider .v .slider-V-arrow{
+    /* width: 35px; */
+    position: absolute;
+    z-index: 200;
+    top: 46.5px;
+    left: 126.8px;
+    width: 61px;
+    transition: 0.3s;
+}
+.slider .v .value-box{
+    padding: 2px 5px;
+    background: green;
+    color: white;
+    position: relative;
+    left: 204px;
+    top: -18px;
+    z-index: 200;
+    /* border: none !important; */
+    border-radius: 5px;
+}
+.slider .v .value-box input{
+    color: white;
+    background: green;
+}
+.slider-box{
+    position: absolute;
+    left: -8px;
+    top: -10px;
+    height: 60px;
+}
+
+/* Z-index for all main three */
+.slider .v{
+    z-index: inherit;
+}
+.slider .r{
+    z-index: inherit;
+}
